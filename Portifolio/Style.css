@@ -356,39 +356,52 @@ body {
 
 /* RESPONSIVO DA TIMELINE */
 @media (max-width: 850px) {
+
     .timeline {
         max-width: 100%;
-        padding: 0 18px;
+        padding-left: 70px !important;
+        padding-right: 18px !important;
     }
 
     .timeline::before {
-        left: 45px;
+        left: 32px !important;
+        transform: none !important;
     }
 
-    .timeline-item {
-        grid-template-columns: 72px 1fr;
-        margin-bottom: 42px;
-    }
-
-    .timeline-techs {
-        grid-column: 1;
-        width: 60px;
-        gap: 4px;
-        padding: 5px;
-    }
-
-    .timeline-techs img {
-        width: 28px;
-        height: 28px;
+    .timeline-item,
+    .timeline-item.left,
+    .timeline-item.right {
+        display: block !important;
+        width: 100% !important;
+        padding: 0 !important;
+        margin-bottom: 48px !important;
     }
 
     .timeline-item.left .timeline-content,
     .timeline-item.right .timeline-content {
-        grid-column: 2;
+        width: 100% !important;
+        margin: 0 !important;
     }
 
     .timeline-content {
-        min-height: auto;
+        min-height: auto !important;
+        width: 100% !important;
+    }
+
+    .timeline-techs {
+        position: absolute !important;
+        left: -55px !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        width: 48px !important;
+        padding: 0 !important;
+        background: #ffffff !important;
+        z-index: 10 !important;
+    }
+
+    .timeline-techs img {
+        width: 26px !important;
+        height: 26px !important;
     }
 }
 
