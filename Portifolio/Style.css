@@ -29,6 +29,7 @@ body {
     position: absolute;
     inset: 0;
     z-index: 1;
+    pointer-events: none;
 }
 
 .hero-content {
@@ -257,12 +258,15 @@ body {
 
 /* TIMELINE */
 .timeline-section {
+    position: relative;
+    z-index: 5;
     background: #ffffff;
     padding: 80px 0 90px;
 }
 
 .timeline-section .container {
     max-width: 1180px;
+    background: #ffffff;
 }
 
 .timeline-section h3 {
@@ -277,6 +281,7 @@ body {
     position: relative;
     max-width: 1050px;
     margin: 0 auto;
+    background: #ffffff;
 }
 
 .timeline::before {
@@ -308,6 +313,15 @@ body {
     grid-column: 3;
 }
 
+.timeline-content {
+    background: #ffffff;
+    min-height: 150px;
+    padding: 24px;
+    border-radius: 8px;
+    border: 1px solid #e2e6f3;
+    box-shadow: 0 8px 25px rgba(21, 30, 58, 0.10);
+}
+
 .timeline-techs {
     grid-column: 2;
     justify-self: center;
@@ -317,7 +331,7 @@ body {
     justify-content: center;
     gap: 10px;
     width: 120px;
-    background: #ffffffd8;
+    background: #ffffff;
     padding: 8px 10px;
     border-radius: 12px;
     position: relative;
@@ -328,49 +342,6 @@ body {
     width: 42px;
     height: 42px;
     object-fit: contain;
-    background: transparent;
-    padding: 0;
-    border-radius: 0;
-    position: relative;
-    z-index: 11;
-}
-
-.timeline-content {
-    background: #ffffff;
-    min-height: 150px;
-    padding: 24px;
-    border-radius: 8px;
-    border: 1px solid #ffffff;
-    box-shadow: 0 8px 25px rgba(21, 30, 58, 0.10);
-}
-
-.timeline-date {
-    color: #1379d6;
-    font-weight: 800;
-    font-size: 0.9rem;
-}
-
-.timeline-content h4 {
-    margin: 8px 0 10px;
-    color: #151e3a;
-    font-size: 1.12rem;
-    line-height: 1.25;
-}
-
-.timeline-content p {
-    color: #434c69;
-    line-height: 1.55;
-    font-size: 0.95rem;
-    margin-bottom: 12px;
-}
-
-.timeline-content small {
-    display: block;
-    color: #151e3a;
-    font-weight: 800;
-    font-size: 0.82rem;
-    line-height: 1.4;
-    margin-top: 12px;
 }
 
 /* RESPONSIVO DA TIMELINE */
@@ -617,4 +588,30 @@ footer {
 .project-card-image img{
     width:100%;
     display:block;
+}
+
+.intro-section,
+.projects-section,
+.timeline-section {
+    position: relative;
+    z-index: 5;
+    background: #ffffff;
+}
+
+.intro-section .container,
+.projects-section .container,
+.timeline-section .container {
+    position: relative;
+    z-index: 6;
+}
+
+.section-title {
+    position: relative;
+    z-index: 5;
+    background: #1b1b1b;
+}
+
+footer {
+    position: relative;
+    z-index: 5;
 }
