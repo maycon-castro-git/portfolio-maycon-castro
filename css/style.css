@@ -422,7 +422,7 @@ body {
 footer {
     position: relative;
     z-index: 5;
-    background: #1b1b1b;
+    background: transparent;
     color: #ffffff;
     padding: 42px 0 0;
     overflow: hidden;
@@ -468,7 +468,7 @@ footer {
 }
 
 .copyright {
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-top: 1px solid rgba(255,255,255,.12);
     padding: 18px 0;
     color: #ffffff;
 }
@@ -615,3 +615,5 @@ footer {
     position: relative;
     z-index: 5;
 }
+
+
