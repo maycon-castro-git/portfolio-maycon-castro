@@ -481,8 +481,8 @@ footer {
 
 .footer-section a,
 .copyright a {
-    color: 
-    text-decoration
+    color: #ffffff;
+    text-decoration: none;
 }
 
 .footer-section a:hover,
@@ -588,4 +588,32 @@ footer {
     border-radius: 0;
 }
 
+/* CORREÇÃO DOS CARDS */
 
+.projects-section{
+    position:relative;
+    z-index:5;
+    background:#ffffff;
+}
+
+.top-projects{
+    position:relative;
+    z-index:5;
+}
+
+.card{
+    position:relative;
+    z-index:5;
+    opacity:1 !important;
+    visibility:visible !important;
+}
+
+.project-card-image{
+    position:relative;
+    z-index:5;
+}
+
+.project-card-image img{
+    width:100%;
+    display:block;
+}
