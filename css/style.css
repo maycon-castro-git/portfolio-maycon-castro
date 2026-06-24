@@ -98,7 +98,7 @@ body {
     position: fixed;
     top: 22px;
     right: 28px;
-    z-index: 20;
+    z-index: 9999;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -106,15 +106,19 @@ body {
 
 .lang-btn,
 .cv-top-btn {
-    background: rgba(201, 179, 179, 0.08);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 34px;
+    height: 34px;
+    background: rgba(27, 27, 27, 0.65);
     color: #ffffff;
-    border: 1px solid rgba(255, 255, 255, 0.35);
-    padding: 5px 10px;
-    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 50%;
     cursor: pointer;
     font-weight: 700;
     text-decoration: none;
-    font-size: 0.95rem;
+    font-size: 0.75rem;
 }
 
 .lang-btn:hover,
@@ -615,5 +619,3 @@ footer {
     position: relative;
     z-index: 5;
 }
-
-
