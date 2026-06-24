@@ -184,12 +184,14 @@ body {
 
 .card {
     color: #ffffff;
-    border-radius: 3px;
-    min-height: 270px;
-    padding: 28px 22px;
+    border-radius: 6px;
+    min-height: 300px;
+    padding: 30px 24px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-image: none !important;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
 }
 
 .blue-card {
