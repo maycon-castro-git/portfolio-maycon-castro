@@ -511,6 +511,7 @@ footer {
 .copyright-text {
     color: #ffffff;
 }
+
 /* RESPONSIVE */
 @media (max-width: 1000px) {
     .top-projects {
