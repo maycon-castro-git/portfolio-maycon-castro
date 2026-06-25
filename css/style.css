@@ -661,3 +661,65 @@ footer {
     z-index: 5;
 }
 
+@media (max-width: 850px) {
+
+    .timeline {
+        position: relative;
+        padding-left: 72px !important;
+        padding-right: 16px !important;
+    }
+
+    .timeline::before {
+        display: block !important;
+        left: 32px !important;
+        width: 3px !important;
+        transform: none !important;
+        background: #a2a5ad !important;
+        z-index: 1 !important;
+    }
+
+    .timeline-item,
+    .timeline-item.left,
+    .timeline-item.right {
+        position: relative !important;
+        display: block !important;
+        width: 100% !important;
+        padding: 0 !important;
+        margin-bottom: 36px !important;
+        z-index: 2 !important;
+    }
+
+    .timeline-content,
+    .timeline-item.left .timeline-content,
+    .timeline-item.right .timeline-content {
+        width: 100% !important;
+        margin: 0 !important;
+        min-height: auto !important;
+    }
+
+    .timeline-techs {
+        position: absolute !important;
+        left: -40px !important;
+        top: 22px !important;
+        transform: translateX(-50%) !important;
+
+        width: 34px !important;
+        height: 34px !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 2px !important;
+
+        background: #ffffff !important;
+        border-radius: 50% !important;
+        z-index: 20 !important;
+        padding: 4px !important;
+    }
+
+    .timeline-techs img {
+        width: 16px !important;
+        height: 16px !important;
+        object-fit: contain !important;
+    }
+}
