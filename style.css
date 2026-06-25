@@ -358,16 +358,17 @@ body {
 @media (max-width: 850px) {
     .timeline {
         position: relative;
-        padding-left: 46px !important;
+        padding-left: 58px !important;
         padding-right: 14px !important;
     }
 
     .timeline::before {
         display: block !important;
-        left: 20px !important;
+        left: 24px !important;
         transform: none !important;
         width: 2px !important;
         background: #a2a5ad !important;
+        z-index: 1 !important;
     }
 
     .timeline-item,
@@ -378,6 +379,7 @@ body {
         padding: 0 !important;
         margin-bottom: 30px !important;
         position: relative !important;
+        z-index: 2 !important;
     }
 
     .timeline-content,
@@ -387,20 +389,24 @@ body {
         margin: 0 !important;
     }
 
-.timeline-techs{
-    position:absolute !important;
-    left:19px !important;      
-    top:18px !important;
-    transform:translateX(-50%) !important;
-    width:34px;
-    height:34px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:#fff;
-    border-radius:50%;
-    z-index:20;
-}
+    .timeline-techs {
+        position: absolute !important;
+        left: -34px !important;
+        top: 22px !important;
+        transform: none !important;
+
+        width: 34px !important;
+        height: 34px !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 2px !important;
+
+        background: #ffffff !important;
+        border-radius: 50% !important;
+        z-index: 20 !important;
+    }
 
     .timeline-techs img {
         width: 16px !important;
