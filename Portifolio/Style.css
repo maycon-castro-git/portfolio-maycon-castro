@@ -355,74 +355,61 @@ body {
 }
 
 /* TIMELINE MOBILE - ALINHAMENTO FINAL */
-/* TIMELINE MOBILE - ÍCONES ALINHADOS AO TOPO DOS CARDS */
+/* TIMELINE MOBILE - LINHA À ESQUERDA */
 @media (max-width: 850px) {
-
     .timeline {
         position: relative;
-        max-width: 100%;
-        padding-left: 64px !important;
-        padding-right: 16px !important;
+        padding-left: 46px !important;
+        padding-right: 14px !important;
     }
 
     .timeline::before {
-        left: 32px !important;
+        display: block !important;
+        left: 20px !important;
         transform: none !important;
-        z-index: 1 !important;
+        width: 2px !important;
+        background: #a2a5ad !important;
     }
 
     .timeline-item,
     .timeline-item.left,
     .timeline-item.right {
-        position: relative !important;
-        display: grid !important;
-        grid-template-columns: 48px 1fr !important;
-        align-items: flex-start !important;
+        display: block !important;
         width: 100% !important;
         padding: 0 !important;
-        margin-bottom: 42px !important;
-        z-index: 2 !important;
-    }
-
-    .timeline-techs {
-        grid-column: 1 !important;
+        margin-bottom: 30px !important;
         position: relative !important;
-        left: -32px !important;
-        top: 22px !important;
-        transform: none !important;
-
-        width: 48px !important;
-        min-width: 48px !important;
-
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        gap: 3px !important;
-
-        background: #ffffff !important;
-        padding: 4px !important;
-        border-radius: 10px !important;
-        z-index: 20 !important;
-    }
-
-    .timeline-techs img {
-        display: block !important;
-        width: 20px !important;
-        height: 20px !important;
-        object-fit: contain !important;
     }
 
     .timeline-content,
     .timeline-item.left .timeline-content,
     .timeline-item.right .timeline-content {
-        grid-column: 2 !important;
         width: 100% !important;
-        min-height: auto !important;
         margin: 0 !important;
     }
 
-    .timeline-content {
-        padding: 22px !important;
+    .timeline-techs {
+        position: absolute !important;
+        left: -35px !important;
+        top: 18px !important;
+        transform: none !important;
+        width: 28px !important;
+        min-width: 28px !important;
+        height: 28px !important;
+        padding: 3px !important;
+        background: #ffffff !important;
+        border-radius: 50% !important;
+        z-index: 20 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 2px !important;
+    }
+
+    .timeline-techs img {
+        width: 16px !important;
+        height: 16px !important;
+        object-fit: contain !important;
     }
 }
 
