@@ -355,7 +355,6 @@ body {
 }
 
 /* TIMELINE MOBILE - ALINHAMENTO FINAL */
-/* TIMELINE MOBILE - LINHA À ESQUERDA */
 @media (max-width: 850px) {
     .timeline {
         position: relative;
@@ -388,23 +387,20 @@ body {
         margin: 0 !important;
     }
 
-    .timeline-techs {
-        position: absolute !important;
-        left: -35px !important;
-        top: 18px !important;
-        transform: none !important;
-        width: 28px !important;
-        min-width: 28px !important;
-        height: 28px !important;
-        padding: 3px !important;
-        background: #ffffff !important;
-        border-radius: 50% !important;
-        z-index: 20 !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        gap: 2px !important;
-    }
+.timeline-techs{
+    position:absolute !important;
+    left:20px !important;      
+    top:18px !important;
+    transform:translateX(-50%) !important;
+    width:34px;
+    height:34px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#fff;
+    border-radius:50%;
+    z-index:20;
+}
 
     .timeline-techs img {
         width: 16px !important;
