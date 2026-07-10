@@ -269,23 +269,63 @@ img {
     margin-right:6px;
     color:#ffffff;
 }
+
 .project-card-image {
-  padding: 0;
+    height: 430px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }
+
 .project-card-image > img {
-  width: 100%;
-  height: 135px;
-  display: block;
-  flex-shrink: 0;
-  object-fit: cover;
-  background: #ffffff;
+    width: 100%;
+    height: 165px;
+    flex-shrink: 0;
+    object-fit: cover;
+    display: block;
+    background: #ffffff;
 }
+
 .project-card-image .card-content {
-  padding: 18px 20px 0;
+    flex: 1;
+    min-height: 0;
+    padding: 18px 20px 10px;
+    overflow: hidden;
 }
+
+.project-card-image .card-content h4 {
+    margin-bottom: 10px;
+    color: #ffffff;
+    font-size: 1.15rem;
+    line-height: 1.2;
+}
+
+.project-card-image .card-content p {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 0.82rem;
+    line-height: 1.4;
+}
+
 .project-card-image .card-actions {
-  padding: 0 20px 20px;
-} 
+    flex-shrink: 0;
+    margin-top: auto;
+    padding: 10px 20px 20px;
+}
+
+.project-card-image .project-links {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.project-card-image .project-links a {
+    color: #ffffff;
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-decoration: none;
+}
 .project-status {
   width: 100%;
   max-width: 180px;
