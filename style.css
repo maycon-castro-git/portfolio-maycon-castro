@@ -842,38 +842,3 @@ footer {
 .resume-btn:hover {
     background: #1379d6;
 }
-
-.cv-menu {
-  position: relative;
-}
-
-.cv-options {
-  position: absolute;
-  top: 46px;
-  right: 0;
-  min-width: 170px;
-  display: none;
-  flex-direction: column;
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 10px;
-  background: rgba(27, 27, 27, 0.96);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
-}
-
-.cv-options.show {
-  display: flex;
-}
-
-.cv-options a {
-  padding: 11px 14px;
-  color: #ffffff;
-  font-size: 0.85rem;
-  font-weight: 700;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-.cv-options a:hover {
-  background: rgba(255, 255, 255, 0.1);
-}
