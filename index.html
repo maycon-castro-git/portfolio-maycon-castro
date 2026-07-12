@@ -489,24 +489,36 @@
 <script src="js/particles.js"></script>
 
 <script>
+  function setLanguage(language) {
+    document.querySelectorAll("[data-en]").forEach((element) => {
+      const translation = element.getAttribute("data-" + language);
 
-function setLanguage(language) {
-
-    document.querySelectorAll("[data-en]").forEach(element => {
-
-        const translation = element.getAttribute("data-" + language);
-
-        if (translation !== null && translation !== "") {
-            element.textContent = translation;
-        }
-
+      if (translation) {
+        element.textContent = translation;
+      }
     });
 
-    const cvFiles = {
-      en: "assets/cv/CV_MAYCONCASTRO_US.pdf",
-      pt: "assets/cv/CV_MAYCON_CASTRO_PT.pdf",
-      es: "assets/cv/CV_MAYCONCASTRO_ES.pdf"
-};
+    const cvButton = document.getElementById("cv-button");
+
+    const cvLinks = {
+      en: "https://github.com/maycon-castro-git/portfolio-maycon-castro/blob/main/assets/cv/CV_MAYCONCASTRO_US.pdf",
+      pt: "https://github.com/maycon-castro-git/portfolio-maycon-castro/blob/main/assets/cv/CV_MAYCON_CASTRO_PT.pdf",
+      es: "https://github.com/maycon-castro-git/portfolio-maycon-castro/blob/main/assets/cv/CV_MAYCONCASTRO_ES.pdf"
+    };
+
+    if (cvButton && cvLinks[language]) {
+      cvButton.href = cvLinks[language];
+    }
+
+    const htmlLanguages = {
+      en: "en",
+      pt: "pt-BR",
+      es: "es"
+    };
+
+    document.documentElement.lang = htmlLanguages[language] || "en";
+  }
+</script>
 
     const cvTop = document.getElementById("cv-button");
     const cvFooter = document.getElementById("cv-footer");
