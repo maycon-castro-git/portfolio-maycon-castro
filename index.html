@@ -17,7 +17,14 @@
     <button onclick="setLanguage('en')" class="lang-btn">🇺🇸</button>
     <button onclick="setLanguage('pt')" class="lang-btn">🇧🇷</button>
     <button onclick="setLanguage('es')" class="lang-btn">🇪🇸</button>
-    <a href="assets/cv/maycon-castro-cv.pdf" target="_blank" class="cv-top-btn">CV</a>
+<a
+    id="cv-button"
+    href="assets/cv/CV_MAYCON_CASTRO_US.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="cv-top-btn">
+    CV
+</a>
 </div>
 
 <header class="hero" id="home">
@@ -438,7 +445,15 @@
 
                 <li><a href="#projects" data-en="Projects" data-pt="Projetos" data-es="Proyectos">Projects</a></li>
 
-                <li><a href="assets/cv/maycon-castro-cv.pdf" target="_blank">CV</a></li>
+                <li>
+    <a
+        id="cv-footer"
+        href="assets/cv/CV_MAYCON_CASTRO_US.pdf"
+        target="_blank"
+        rel="noopener noreferrer">
+        CV
+    </a>
+</li>
             </ul>
         </div>
 
@@ -454,26 +469,55 @@
 <script src="js/particles.js"></script>
 
 <script>
+
 function setLanguage(language) {
+
     document.querySelectorAll("[data-en]").forEach(element => {
+
         const translation = element.getAttribute("data-" + language);
 
         if (translation !== null && translation !== "") {
             element.textContent = translation;
         }
+
     });
 
-    if (language === "pt") {
-        document.documentElement.lang = "pt-BR";
-    } else if (language === "es") {
-        document.documentElement.lang = "es";
-    } else {
-        document.documentElement.lang = "en";
-    }
-}
-</script>
+    const cvFiles = {
+      en: "assets/cv/CV_MAYCONCASTRO_US.pdf",
+      pt: "assets/cv/CV_MAYCON_CASTRO_PT.pdf",
+      es: "assets/cv/CV_MAYCONCASTRO_ES.pdf"
+};
 
-<script>
+    const cvTop = document.getElementById("cv-button");
+    const cvFooter = document.getElementById("cv-footer");
+
+    if (cvFiles[language]) {
+
+        if (cvTop) {
+            cvTop.href = cvFiles[language];
+        }
+
+        if (cvFooter) {
+            cvFooter.href = cvFiles[language];
+        }
+
+    }
+
+    if (language === "pt") {
+
+        document.documentElement.lang = "pt-BR";
+
+    } else if (language === "es") {
+
+        document.documentElement.lang = "es";
+
+    } else {
+
+        document.documentElement.lang = "en";
+
+    }
+
+}
 
 let lastScroll = 0;
 
