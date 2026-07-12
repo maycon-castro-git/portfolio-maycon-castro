@@ -11,20 +11,61 @@
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
 </head>
 
+<script>
+  function toggleCvMenu() {
+    const menu = document.getElementById("cv-options");
+
+    if (menu) {
+      menu.classList.toggle("show");
+    }
+  }
+
+  document.addEventListener("click", function (event) {
+    const cvMenu = document.querySelector(".cv-menu");
+    const options = document.getElementById("cv-options");
+
+    if (cvMenu && options && !cvMenu.contains(event.target)) {
+      options.classList.remove("show");
+    }
+  });
+</script>
+
 <body>
 
 <div class="top-actions">
     <button onclick="setLanguage('en')" class="lang-btn">🇺🇸</button>
     <button onclick="setLanguage('pt')" class="lang-btn">🇧🇷</button>
     <button onclick="setLanguage('es')" class="lang-btn">🇪🇸</button>
-<a
-    id="cv-button"
-    href="assets/cv/CV_MAYCON_CASTRO_US.pdf"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="cv-top-btn">
+<div class="cv-menu">
+  <button class="cv-top-btn" type="button" onclick="toggleCvMenu()">
     CV
-</a>
+  </button>
+
+  <div class="cv-options" id="cv-options">
+    <a
+      href="assets/cv/CV_MAYCON_CASTRO_PT.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      🇧🇷 Português
+    </a>
+
+    <a
+      href="assets/cv/CV_MAYCONCASTRO_US.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      🇺🇸 English
+    </a>
+
+    <a
+      href="assets/cv/CV_MAYCONCASTRO_ES.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      🇪🇸 Español
+    </a>
+  </div>
 </div>
 
 <header class="hero" id="home">
