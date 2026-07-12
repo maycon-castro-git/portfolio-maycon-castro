@@ -520,61 +520,6 @@
   }
 </script>
 
-    const cvTop = document.getElementById("cv-button");
-    const cvFooter = document.getElementById("cv-footer");
-
-    if (cvFiles[language]) {
-
-        if (cvTop) {
-            cvTop.href = cvFiles[language];
-        }
-
-        if (cvFooter) {
-            cvFooter.href = cvFiles[language];
-        }
-
-    }
-
-    if (language === "pt") {
-
-        document.documentElement.lang = "pt-BR";
-
-    } else if (language === "es") {
-
-        document.documentElement.lang = "es";
-
-    } else {
-
-        document.documentElement.lang = "en";
-
-    }
-
-}
-
-let lastScroll = 0;
-
-const topActions = document.querySelector(".top-actions");
-
-window.addEventListener("scroll",()=>{
-
-    const current = window.pageYOffset;
-
-    if(current > lastScroll && current > 120){
-
-        topActions.classList.add("hide");
-
-    }else{
-
-        topActions.classList.remove("hide");
-
-    }
-
-    lastScroll = current;
-
-});
-
-</script>
-
 </body></html>
 
 
