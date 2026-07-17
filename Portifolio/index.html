@@ -37,14 +37,14 @@
   <button onclick="setLanguage('pt')" class="lang-btn">🇧🇷</button>
   <button onclick="setLanguage('es')" class="lang-btn">🇪🇸</button>
 
-  <a
-    href="assets/cv/CV_MAYCON_CASTRO_PT.pdf"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="cv-top-btn"
-  >
-    CV
-  </a>
+<a
+  href="https://github.com/maycon-castro-git/portfolio-maycon-castro/tree/main/assets/%20cv"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="cv-top-btn"
+>
+  CV
+</a>
 </div>
 
 <header class="hero" id="home">
@@ -489,80 +489,35 @@
 <script src="js/particles.js"></script>
 
 <script>
+  function setLanguage(language) {
+    document.querySelectorAll("[data-en]").forEach((element) => {
+      const translation = element.getAttribute("data-" + language);
 
-function setLanguage(language) {
-
-    document.querySelectorAll("[data-en]").forEach(element => {
-
-        const translation = element.getAttribute("data-" + language);
-
-        if (translation !== null && translation !== "") {
-            element.textContent = translation;
-        }
-
+      if (translation) {
+        element.textContent = translation;
+      }
     });
 
-const cvFiles = {
-  en: "https://raw.githubusercontent.com/maycon-castro-git/portfolio-maycon-castro/main/assets/cv/CV_MAYCONCASTRO_US.pdf",
-  pt: "https://raw.githubusercontent.com/maycon-castro-git/portfolio-maycon-castro/main/assets/cv/CV_MAYCON_CASTRO_PT.pdf",
-  es: "https://raw.githubusercontent.com/maycon-castro-git/portfolio-maycon-castro/main/assets/cv/CV_MAYCONCASTRO_ES.pdf"
-};
+    const cvButton = document.getElementById("cv-button");
 
-    const cvTop = document.getElementById("cv-button");
-    const cvFooter = document.getElementById("cv-footer");
+    const cvLinks = {
+      en: "https://github.com/maycon-castro-git/portfolio-maycon-castro/blob/main/assets/cv/CV_MAYCONCASTRO_US.pdf",
+      pt: "https://github.com/maycon-castro-git/portfolio-maycon-castro/blob/main/assets/cv/CV_MAYCON_CASTRO_PT.pdf",
+      es: "https://github.com/maycon-castro-git/portfolio-maycon-castro/blob/main/assets/cv/CV_MAYCONCASTRO_ES.pdf"
+    };
 
-    if (cvFiles[language]) {
-
-        if (cvTop) {
-            cvTop.href = cvFiles[language];
-        }
-
-        if (cvFooter) {
-            cvFooter.href = cvFiles[language];
-        }
-
+    if (cvButton && cvLinks[language]) {
+      cvButton.href = cvLinks[language];
     }
 
-    if (language === "pt") {
+    const htmlLanguages = {
+      en: "en",
+      pt: "pt-BR",
+      es: "es"
+    };
 
-        document.documentElement.lang = "pt-BR";
-
-    } else if (language === "es") {
-
-        document.documentElement.lang = "es";
-
-    } else {
-
-        document.documentElement.lang = "en";
-
-    }
-
-}
-
-let lastScroll = 0;
-
-const topActions = document.querySelector(".top-actions");
-
-window.addEventListener("scroll",()=>{
-
-    const current = window.pageYOffset;
-
-    if(current > lastScroll && current > 120){
-
-        topActions.classList.add("hide");
-
-    }else{
-
-        topActions.classList.remove("hide");
-
-    }
-
-    lastScroll = current;
-
-});
-
+    document.documentElement.lang = htmlLanguages[language] || "en";
+  }
 </script>
 
 </body></html>
-
-
