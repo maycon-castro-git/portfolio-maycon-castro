@@ -571,11 +571,6 @@ footer {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .top-projects > article:nth-child(5),
-  .top-projects > article:nth-child(6) {
-    grid-column: auto;
-  }
-
   .timeline-section .container {
     max-width: 100%;
   }
